@@ -50,6 +50,7 @@ public class PushService extends LoggerSupport {
         String url = "redis://" + (this.redisPassword.isEmpty() ? "" : ":" + this.redisPassword + "@") + this.redisHost
                 + ":" + this.redisPort + "/" + this.redisDatabase;
 
+        url = "redis://192.168.159.152:6379/0";
         logger.info("create redis client: {}", url);
         Redis redis = Redis.createClient(vertx, url);
 
